@@ -16,7 +16,7 @@
         <button id="stop_slideshow">stop slideshow</button>
       </div>
       <div id="image-container">
-        <img id="divImg" src="" alt="Image 1" style="width: 30%; height: 30%" />
+        <img id="divImg" src="assets/doaa.jpg" alt="Image 1" style="width: 30%; height: 30%" />
       </div>
       
     </div>
@@ -46,13 +46,13 @@
       <div id="filtering-container" style="display: grid; grid-template-columns: 1fr 1fr">
       
         <span>Sort</span>
-        <select name="" id="">
-          <option value="">name</option>
-          <option value="">grade</option>
+        <select name="" id="sorting">
+          <option value="name">name</option>
+          <option value="grade">grade</option>
         </select>
       
         <span>Filter</span>
-        <select name="" id="">
+        <select name="" id="filtering">
             
             <option value="all">all</option>
             <option value="success">success</option>
@@ -73,7 +73,37 @@
                 </tr>
             </thead>
             <tbody id="tbody" style="border: 1px solid black;">
-            
+              <tr>
+                <td>Abdelrehem Ahmed</td>
+                <td>74</td>
+                <td>SD</td>
+                <td><span class="material-symbols-outlined">delete</span></td>
+              </tr>
+            <tr>
+              <td>Mohamed Salah</td>
+              <td>10</td>
+              <td>SD</td>
+              <td><span class="material-symbols-outlined">delete</span></td>
+            </tr>
+            <tr>
+              <td>Omar Marmoush</td>
+              <td>7</td>
+              <td>OS</td>
+              <td><span class="material-symbols-outlined">delete</span></td>
+            </tr>
+            <tr>
+              <td>Mohamed Elneny</td>
+              <td>76</td>
+              <td>EL</td>
+              <td><span class="material-symbols-outlined">delete</span></td>
+            </tr> 
+            <tr>
+              <td>Abo Trika</td>
+              <td>99</td>
+              <td>EL</td>
+              <td><span class="material-symbols-outlined">delete</span></td>
+            </tr>
+           
             </tbody>
             </table>
 

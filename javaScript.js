@@ -50,6 +50,7 @@ slideshowBtn.onclick = () => {
     nextBtn.style.display = "inline";
     prevBtn.style.display = "inline";
     slideshowBtn.disabled = false;
+    // return;
   };
 };
 //#endregion
@@ -176,28 +177,27 @@ addBtn.onclick = () => {
   //check if the input values are already in the table
   //#region
   
-  let inputName = formInput[0].value.trim();
-  inputName =inputName[0].toUpperCase() + inputName.slice(1).toLowerCase();
-  let exestingValues = [];
-  formInput[0].value = inputName;
-
+  // let inputName = formInput[0].value.trim();
+  // // inputName =inputName[0].toUpperCase() + inputName.slice(1).toLowerCase();
+  // formInput[0].value = inputName;
+  
+  
+  // Collect existing student names
   let tr_values = Array.from(myTable.tBodies[0].children);
-  
-  
+  let exestingValues = [];
   exestingValues = tr_values.map((tr) =>
     tr.cells[0].textContent.trim().toLowerCase()
   );
-  // Collect existing student names
-  tr_values.forEach((tr) => {
-    exestingValues.push(tr.cells[0].textContent);
-    // console.log("tr.cells[0].textContent", tr.cells[0].textContent);
-    // console.log("exectingValues", exestingValues);
-  });
+  // tr_values.forEach((tr) => {
+  //   exestingValues.push(tr.cells[0].textContent);
+  //   // console.log("tr.cells[0].textContent", tr.cells[0].textContent);
+  //   // console.log("exectingValues", exestingValues);
+  // });
   // console.log("tr", tr_values);
 
   for (let i = 0; i < exestingValues.length; i++) {
 
-    if (exestingValues[i].toLowerCase() == formInput[0].value.toLowerCase()) {
+    if (exestingValues[i]== formInput[0].value.trim().toLowerCase()) {
       errorMessage(formInput[0]," this name already exists")
       return;
     }
